@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/* --------------------------- *\
+			VARIABLES
+\* --------------------------- */
+
+:root {
+	--color-principal: #7ACC2D;
+	--color-black: #313337;
+    --color-white: #ffffff;
+    
+    --font-size-normal: 1rem;
+    --font-size-grande: 1.4rem;
+    --font-size-muy-grande: 2.5rem;
+    
+    --espaciado: 1rem;
+    --espaciado-x2: 2rem;
+
+    --box: 0 0 2px 1px #e6e5e9;
+}
+
+/* --------------------- *\
+        GENERALES
+\* --------------------- */
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    min-width: 320px;
+}
+
+h1 {
+    text-align: center;
+    font-size: var(--font-size-muy-grande);
+}
+
+h2 {
+    font-size: var(--font-size-grande);
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* --------------------- *\
+          NAVBAR
+\* --------------------- */
+
+.navbar {
+    height: 4.5rem;
+    padding: 0 var(--espaciado);
+    background-color: var(--color-principal);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+    .navbar a {
+        color: var(--color-black);
+        text-decoration: none;
+    }
+
+/* --------------------- *\
+           HERO
+\* --------------------- */
+
+.hero {
+    padding: 10% 20%;
+}
+
+/* --------------------- *\
+        PRODUCTOS
+\* --------------------- */
+
+.productos {
+    padding: 0 30%;
+    background-image: url("../images/curve.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: var(--espaciado-x2);
+}
+
+    .producto {
+        padding: var(--espaciado);
+        background-color: var(--color-white);
+
+        border-radius: 0.2rem;
+        box-shadow: var(--box);
+
+        position: relative;
+        bottom: 25%;
+    }
+
+        .producto img {
+            max-width: 100%;
+        }
+
+        .producto h2 {
+            margin: 0;
+        }
+
+        .producto button {
+            width: 100%;
+            color: white;
+            background-color: var(--color-principal);
+
+            font-weight: 600;
+            font-size: var(--font-size-grande);
+            padding: 0.7em;
+            cursor: pointer;
+
+            border: none;
+            border-radius: 0.2rem;
+        }
+
+/* --------------------- *\
+        BENEFICIOS
+\* --------------------- */
+
+.beneficios {
+    padding: 10%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 162px);
+    grid-gap: var(--espaciado-x2);
+    
+    justify-items: center;
+    justify-content: space-around;
+}
+
+        .beneficio img {
+            height: 9rem;
+        }
+
+        .beneficio h2 {
+            text-align: center;
+        }
+
+/* --------------------- *\
+        MENCIONES
+\* --------------------- */
+
+.menciones {
+    padding: 10%;
+    border-top: 1px solid #e6e5e9;
+}
+
+.menciones h1 {
+    margin-top: 0;
+}
+
+    .menciones-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: var(--espaciado);
+    }
+
+        .mencion {
+            box-shadow: var(--box);
+        }
+
+            .mencion img {
+                width: 100%;
+            }
+
+            .mencion h2, .mencion p {
+                margin: var(--espaciado);
+                margin-top: 0;
+            }
+
+/* --------------------- *\
+        FOOTER
+\* --------------------- */
+
+.footer {
+    height: 4.5rem;
+    padding: 0 var(--espaciado);
+    color: var(--color-white);
+    background-color: var(--color-black);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .footer p {
+        cursor: pointer;
+    }
+
+    .footer a {
+        color: var(--color-principal);
+    }
+
+
+/* --------------------- */
+/* --------------------- *\
+    PRODUCTOS.HTML
+\* --------------------- */
+/* --------------------- */
+
+.container {
+    max-width: 1024px;
+    min-height: calc(100vh - 9rem);
+
+    padding: var(--espaciado-x2);
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    align-content: space-evenly;
+    grid-gap: var(--espaciado-x2);
+}
+
+.container h1 {
+    text-align: left;
+    margin: 0;
+}
+
+.producto-descripcion {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+}
+
+.producto-descripcion.alternado {
+    grid-template-columns: 65% 35%;
+}
+
+    .producto-descripcion img {
+        width: 70%;
+    }
+
+    .producto-descripcion .contenido {
+        padding: 0 5%;
+    }
+
+/* --------------------- */
+/* --------------------- *\
+        VENTA.HTML
+\* --------------------- */
+/* --------------------- */
+
+.venta-producto {
+    min-height: calc(100vh - 9rem);
+    padding: var(--espaciado-x2) 25%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: var(--espaciado-x2);
+    align-content: center;
+}
+
+    .venta-producto .producto {
+        position: initial;
+        height: fit-content;
+    }
+
+    .venta-producto .modulo-de-pago {
+        box-shadow: var(--box);
+        padding: var(--espaciado);
+        height: fit-content;
+    }
+
+        .modulo-de-pago label {
+            display: block;
+        }
+        
+        .modulo-de-pago input {
+            display: block;
+            width: 100%;
+            height: 2.5em;
+            margin: .7em 0;
+            box-sizing: border-box;
+
+            font-size: var(--font-size-grande);
+        }
+
+        .modulo-de-pago .form-buttom {
+            border: none;
+            border-radius: 0.2rem;
+            margin-bottom: 0;
+            
+            color: var(--color-white);
+            background-color: var(--color-principal);
+            
+            font-weight: 600;
+            font-size: var(--font-size-grande);
+            cursor: pointer;
+        }
+
+/* --------------------- */
+/* --------------------- *\
+    EXITO / FALLA.HTML
+\* --------------------- */
+/* --------------------- */
+
+.resultado-contenido {
+    width: 100vw;
+    height: 100vh;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .resultado-contenido a {
+        color: var(--green-color);
+    }

@@ -1,0 +1,60 @@
+@media (max-width: 1024px) {
+    .productos {
+        padding: 0 25%;
+    }
+    
+    .menciones {
+        padding: 10% 5%;
+    }
+
+    .venta-producto {
+        padding: var(--espaciado-x2) 20%;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+
+    .productos {
+        padding: 0 20%;
+    }
+
+    .menciones-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .venta-producto {
+        padding: var(--espaciado-x2) 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 20% 5%;
+    }
+
+    .productos {
+        padding: 0 15%;
+        grid-template-columns: auto;
+    }
+
+    .beneficios {
+        padding: 10%;
+
+        grid-template-columns: auto;
+    }
+
+    .menciones-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .venta-producto {
+        grid-template-columns: 1fr;
+    }
+}
